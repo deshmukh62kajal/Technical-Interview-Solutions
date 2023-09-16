@@ -1,0 +1,35 @@
+// 1) Program to count occurrencex of a given character in a string
+// Solutions :
+public class CharCount 
+{
+    public static int countCharacter(String S, char chartoCount) 
+    {
+        int c = 0;
+        for (int i = 0; i < S.length(); i++) 
+        {
+            if (S.charAt(i) == chartoCount) 
+            {
+                c++;
+            }
+        }
+        return c;
+    }
+    public static void main(String args[]) 
+    {
+        String Str1 = "geeksforgeeks";
+        char char1 = 'e';
+        int r1 = countCharacter(Str1, char1);
+        System.out.println("Count character '" + char1 + "' in the input string: " + r1);
+
+
+        String Str2 = "abccdefgaa";
+        char char2 = 'a';
+        int r2 = countCharacter(Str2, char2);
+        System.out.println("\nCount character '" + char2 + "' in the input string: " + r2);
+    }
+}
+
+OUTPUT :
+
+Count character 'e' in the input string: 4
+Count character 'a' in the input string: 3
