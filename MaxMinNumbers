@@ -1,0 +1,40 @@
+public class Array 
+{
+    public static void find(int[] arr) 
+    {
+        if (arr.length == 0) 
+        {
+            System.out.println(" Array is empty.");
+            return;
+        }
+
+        int MAX = arr[0];
+        int MIN = arr[0];
+
+        for (int i = 1; i < arr.length; i++) 
+        {
+            if (arr[i] > MAX) 
+            {
+                MAX = arr[i];
+            }
+            if (arr[i] < MIN) 
+            {
+                MIN = arr[i];
+            }
+        }
+
+        System.out.println("\nMAXIMUM NUMBER IS: " +  MAX);
+        System.out.println("MINIMUM NUMBER IS: " +  MIN);
+    }
+
+    public static void main(String args[]) 
+    {
+        int[] arr1 = {1, 2, 3, 4, 5};
+        System.out.println("Input: Array[] = {1, 2, 3, 4, 5}");
+        find(arr1);
+
+        int[] arr2 = {5, 3, 7, 4, 2};
+        System.out.println("\nInput: Array[] = {5, 3, 7, 4, 2}");
+        find(arr2);
+    }
+}
